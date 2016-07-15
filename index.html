@@ -1,0 +1,60 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"></head>
+</head>
+
+<body>
+
+  <div ng-controller="MainController as ctrl">
+    <div class="container">
+
+
+    <div class="page-header text-center">
+    		<h2>List of All People</h2>
+    </div>
+
+    <div ng-repeat="person in ctrl.people">
+      <person-entry person="person"></person-entry>
+    </div>
+
+    </br>
+
+  <label for="name">Enter a new name</label></br>
+  <input type="text" ng-model="ctrl.newName" class="form--sm col-md3" id="form">
+  </br>
+
+  <label for="name">Enter a new address</label></br>
+  <input type="text" ng-model="ctrl.newAddress" class="form--sm col-md3" id="form">
+  </br>
+
+  <label for="name">Enter a new city</label></br>
+  <input type="text" ng-model="ctrl.newCity" class="form--sm col-md3" id="form">
+  </br>
+
+  <label for="name">Enter a new state</label></br>
+  <input type="text" ng-model="ctrl.newState" class="form--sm col-md3" id="form">
+  </br>
+
+  <label for="name">Enter a new zip</label></br>
+  <input type="text" ng-model="ctrl.newZip" class="form--sm col-md3" id="form">
+  </br>
+
+</br>
+
+  <button ng-click="ctrl.addContact()">Add Contact</button>
+
+</div>
+
+
+  </div>
+
+    <script src="js/angular.js"></script>
+    <script src="js/app/app.js"></script>
+    <script src="js/app/controllers/MainController.js"></script>
+    <script src="js/app/services/DataService.js"></script>
+    <script src="js/app/directives/personEntry.js"></script>
+</body>
+</html>
